@@ -90,10 +90,13 @@ if(isAdmin == false) {
 
 // Step 12: Use an 'if' statement to check if 'isAdmin' is 'false'.
 // Display 'isAdmin is false.' if 'isAdmin' has the value 'false'.
-isAdmin == false
 
-if(isAdmin == false) {
-    console.log("isAdmin value " + isAdmin + " is evaluated as truthy.")
+// Umdeklariere klappt nicht
+
+let isAdmin2 = true
+
+if(isAdmin2 == true) {
+    console.log("isAdmin value " + isAdmin2 + " is evaluated as truthy.")
 } else {
-    console.log("isAdmin value " + isAdmin + " is evaluated as false.")
+    console.log("isAdmin value " + isAdmin2 + " is evaluated as falsy.")
 }
