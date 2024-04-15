@@ -67,7 +67,7 @@ if(username == null ) {
 // Step 9: Use an 'if-else' statement to check if 'username' is evaluated as a 'falsy' value.
 // Display 'Username is evaluated as falsy.' if 'username' is considered 'falsy'.
 
-// Umdeklarieren der Variable hat nicht gekappt, obwohl es ein let ist
+// Umdeklarieren der Variable hat nicht gekappt, obwohl es ein let ist: let username:boolean = false
 
 if(username == "") {
     console.log("Username is evaluated as falsy.")
@@ -91,7 +91,8 @@ if(isAdmin == false) {
 // Step 12: Use an 'if' statement to check if 'isAdmin' is 'false'.
 // Display 'isAdmin is false.' if 'isAdmin' has the value 'false'.
 
-// Umdeklariere klappt nicht
+// Umdeklariere klappt nicht: let isAdmin:boolean = true;
+
 
 let isAdmin2 = true
 
@@ -100,3 +101,27 @@ if(isAdmin2 == true) {
 } else {
     console.log("isAdmin value " + isAdmin2 + " is evaluated as falsy.")
 }
+
+
+
+// Bonus: Write a code that accepts a number n and outputs a Christmas tree with the following patterns for n = 5:
+
+// Von ChatGPT nur zum Spass geklaut
+
+function christmasTree(n: number): void {
+    // Upper part of the tree
+    for (let i = 1; i <= n; i++) {
+        const spaces = " ".repeat(n - i);
+        const stars = "*".repeat(2 * i - 1);
+        console.log(spaces + stars);
+    }
+
+    // Lower part of the tree
+    for (let i = 0; i < n; i++) {
+        console.log(" ".repeat(n - 1) + "*");
+    }
+}
+
+// Test with n = 5
+const n: number = 5;
+christmasTree(n);
