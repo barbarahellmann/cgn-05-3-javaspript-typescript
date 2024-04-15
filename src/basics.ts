@@ -3,12 +3,12 @@ const age:number = 15;
 
 
 // 2. Write a 'for' loop that outputs the numbers from 1 to 'age
-for(let i:number = 0; i < age; i++) {
+for(let i:number = 1; i < age; i++) {
     console.log("Zähle die Jahre = " + i)
 }
 
-let j:number = 0;
-while (j > age) {
+let j:number = 1;
+while (j < age) {
     console.log("Jahreszähler = " + j)
     j++
 }
@@ -29,19 +29,19 @@ let score:number = 0;
 // Step 5: Use an 'if' statement to check if 'score' has a value.
 // Display 'Score is available.' if 'score' has a value other than 0.
 
-if(score == NaN) {
-    console.log("Score hat no value")
-} else {
+if(score !== undefined) {
     console.log("Score hat den value = " + score)
+} else {
+    console.log("Score hat no value")
 }
 
 // Step 6: Use an 'if-else' statement to check if 'score' is evaluated as a 'truthy' value.
 // Display 'Score is evaluated as truthy.' if 'score' is considered 'truthy'.
 
-if(score == NaN) {
-    console.log("Score" + score+ " is evaluated as falsy.")
-} else {
+if(score) {
     console.log("Score "+ score+ " is evaluated as truthy.")
+} else {
+    console.log("Score" + score+ " is evaluated as falsy.")
 }
 
 // Step 7: Declare a variable named 'username' of type 'string' and assign it the value '' (empty string).
@@ -50,7 +50,7 @@ let username:string = "";
 
 // Step 8: Use an 'if' statement to check if 'username' has a value.
 
-if(username == "" ) {
+if(username) {
     console.log("Username has no value.")
 } else {
     console.log("Username has value: " + username)
@@ -58,7 +58,7 @@ if(username == "" ) {
 
 // Display 'Username is available.' if 'username' has a value.
 
-if(username == null ) {
+if(username) {
     console.log("Username is available.")
 } else {
     console.log("Username ist not available")
@@ -69,7 +69,7 @@ if(username == null ) {
 
 // Umdeklarieren der Variable hat nicht gekappt, obwohl es ein let ist: let username:boolean = false
 
-if(username == "") {
+if(username) {
     console.log("Username is evaluated as falsy.")
 } else {
     console.log("Username is evaluated as truthy.")
